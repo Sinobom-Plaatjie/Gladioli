@@ -16,5 +16,17 @@ namespace Gladioli
         {
             InitializeComponent();
         }
+
+
+
+        //  private async void FindMeButton(object sender, EventArgs e)
+        //   {
+        //       await Navigation.PushAsync(new  ());
+        //   }
+
+        //   private async void JourneyButtonAsync(object sender, EventArgs e)
+        //   {
+        //      await Navigation.PushAsync(new());
+        //   }
     }
 }
