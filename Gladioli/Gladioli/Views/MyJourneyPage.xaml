@@ -9,7 +9,29 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/> 
             </Frame>
+           
+            <ListView x:Name="listView"
+              Margin="20"
+              ItemSelected="OnListItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,0,0"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Day}"
+                                 VerticalTextAlignment="Center"
+                                 HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding DateTime}"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <ImageButton Source="images.png" HeightRequest="70" WidthRequest="50"  HorizontalOptions="End" VerticalOptions="EndAndExpand" CornerRadius="10" Clicked="AddNewJourney"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

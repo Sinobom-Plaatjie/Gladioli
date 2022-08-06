@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gladioli.Views.EntryOfJourneyPage">
+    <ContentPage.Content>
+        <StackLayout Margin="25"
+            VerticalOptions="StartAndExpand"  >
+            <Label Text="Which Day" />
+            <Entry Text="{Binding Day}" />
+            <Label Text="Note" />
+            <Entry Text="{Binding Description}" />
+            <Label Text="Date" />
+            <DatePicker MinimumDate="01/11/2012"
+            MaximumDate="01/11/2023"
+            Date="{Binding DateTime}" />
+            <Button Margin="5"  Text="Save"
+                Clicked="OnSaveClicked" CornerRadius="20" BackgroundColor="DimGray" />
+        </StackLayout>
+    
+    </ContentPage.Content>
+</ContentPage>
