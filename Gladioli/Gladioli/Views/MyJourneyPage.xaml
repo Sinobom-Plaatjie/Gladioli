@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gladioli.Views.MyJourneyPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="LightPink" Padding="30">
+                <Label Text="How are you feeling today?"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/> 
+            </Frame>
+            <ImageButton Source="images.png" HeightRequest="70" WidthRequest="50"  HorizontalOptions="End" VerticalOptions="EndAndExpand" CornerRadius="10" Clicked="AddNewJourney"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

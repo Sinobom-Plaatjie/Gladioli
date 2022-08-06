@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gladioli.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Gladioli
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MyJourneyPage());
         }
 
         protected override void OnStart()
