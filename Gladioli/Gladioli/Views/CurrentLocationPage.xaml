@@ -1,13 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Gladioli.CurrentLocationPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              Padding="20,40,15,15"
+             x:Class="Gladioli.CurrentLocationPage" NavigationPage.HasNavigationBar="False" >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="My Location!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="My Location!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="" />
+
+
+            <StackLayout>
+                <Frame BorderColor="Black" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Share my Location" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                        <Switch Grid.Column="1" IsToggled="{Binding ShareMylocation}"/>
+                    </Grid>
+                </Frame>
+                <StackLayout>
+                    <Label Text="People" TextColor="Black" FontSize="Title" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Mom (+276 333 *****)                                     12KM" FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                    <Label Text="Big Sis(+278 700 *****)                                   32KM" FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                    <Label Text="Dad Sis(+277 588 *****)                                  12KM" FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand" />
+
+
+
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
+
+      
+        
       <!--  <maps:Map IsShowingUser="true" x:Name="map"/>-->
+        
+            
     </ContentPage.Content>
 </ContentPage>

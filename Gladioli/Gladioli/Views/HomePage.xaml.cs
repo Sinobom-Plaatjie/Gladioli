@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gladioli.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,14 @@ namespace Gladioli
 
 
 
-        //  private async void FindMeButton(object sender, EventArgs e)
-        //   {
-        //       await Navigation.PushAsync(new  ());
-        //   }
+          private async void FindMeButton(object sender, EventArgs e)
+          {
+            await Navigation.PushAsync(new CurrentLocationPage());
+          }
 
-        //   private async void JourneyButtonAsync(object sender, EventArgs e)
-        //   {
-        //      await Navigation.PushAsync(new());
-        //   }
+         private async void JourneyButtonAsync(object sender, EventArgs e)
+          {
+             await Navigation.PushAsync(new MyJourneyPage());
+          }
     }
-}
+}  
