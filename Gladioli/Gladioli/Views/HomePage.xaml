@@ -1,12 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gladioli.HomePage">
+             x:Class="Gladioli.HomePage" BackgroundColor="PaleVioletRed" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
+        
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <Grid>
+                    <Label Text="You are not Alone" FontSize="45" FontAttributes="None" HorizontalOptions="Center" />
+                    </Grid>
+                <Image Source="https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/GettyImages-1296144988_471203_btewdq.jpg" HorizontalOptions="FillAndExpand" HeightRequest="300" WidthRequest="400" />
+            </StackLayout>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+               <StackLayout Grid.Column="0"   Padding="40"  HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                    <ImageButton Source="https://cdn-icons-png.flaticon.com/128/3899/3899091.png" WidthRequest="86" HeightRequest="100" Clicked="JourneyButtonAsync" BackgroundColor="Transparent"/>
+                    <Label Text="My Journey" TextColor="Black"  FontSize="20"/>
+
+                </StackLayout>
+
+                <StackLayout  Grid.Column="1"  Padding="40" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                    <ImageButton Source="https://cdn-icons.flaticon.com/png/512/3425/premium/3425073.png?token=exp=1659810891~hmac=f1057eba29675ab6a64e3282ad711cec" WidthRequest="86" HeightRequest="100" Clicked="FindMeButton"  BackgroundColor="Transparent"/>
+                    <Label Text="Find Me" TextColor="Black"  FontSize="20"/>
+
+                </StackLayout>
+
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    </ContentPage.Content> 
+</ContentPage> 
+
+
