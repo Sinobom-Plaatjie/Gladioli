@@ -8,6 +8,6 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
-        <maps:Map IsShowingUser="true" x:Name="map"/>
+       <!-- <maps:Map IsShowingUser="true" x:Name="map"/>-->
     </ContentPage.Content>
 </ContentPage>

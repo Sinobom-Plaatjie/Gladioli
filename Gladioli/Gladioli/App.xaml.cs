@@ -11,7 +11,7 @@ namespace Gladioli
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MyJourneyPage());
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()

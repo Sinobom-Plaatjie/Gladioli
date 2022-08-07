@@ -25,14 +25,14 @@ namespace Gladioli
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
                 var location = await Geolocation.GetLocationAsync(request);
 
-               if (location != null)
+               /*if (location != null)
                 {
                     Position p = new Position(location.Latitude, location.Longitude);
                     MapSpan mapSpan = MapSpan.FromCenterAndRadius(p, Distance.FromKilometers(.444));
                     map.MoveToRegion(mapSpan);
                     Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
 
-                }
+                }*/
             }
 
             catch (FeatureNotSupportedException fnsEx)

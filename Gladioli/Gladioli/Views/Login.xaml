@@ -1,12 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gladioli.Login">
+             x:Class="Gladioli.Login" NavigationPage.HasNavigationBar="False" Background="pink">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame>
+                <Label Text="Welcome to Gladioli" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="25" Padding="8"/>
+            </Frame>
+
+            <Label Text="A safe space and platform to help women master real-life experience" FontSize="20" HorizontalOptions="CenterAndExpand"  FontAttributes="Italic" Padding="10"/>
+
+            <!--  <StackLayout 
+                VerticalOptions="Start">
+                <StackLayout.Padding>
+                    <OnPlatform 
+                        x:TypeArguments="Thickness"
+                        iOS="20"
+                        Android="20,100,20,0">
+                    </OnPlatform>
+                </StackLayout.Padding>
+                <Image Source="logo3.jpg" BackgroundColor="Transparent"  HeightRequest="200"/>-->
+            <Label Text="Sign in" FontSize="Title" TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0,50,0,20"/>
+
+
+            <Label 
+                    Text="Username"
+                    TextColor="#34495e"
+                    HorizontalOptions="Center"
+                    FontSize="Title"
+                    Font="Arial,10"/>
+            <Entry
+                    Placeholder="Username"
+                    PlaceholderColor="#95a5a6"
+                    FontSize="12"
+                    FontFamily="Arial"
+                    x:Name="entUsername"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Username}"/>
+            <Label 
+                    Text="Password"
+                    TextColor="#34495e"
+                    HorizontalOptions="Center"
+                    FontSize="Title"
+                    Font="Arial,10"/>
+            <Entry
+                    Placeholder="Password"
+                    PlaceholderColor="#95a5a6"
+                    FontSize="12"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200"
+                    FontFamily="Arial"
+                    IsPassword="True"
+                    HorizontalTextAlignment="Center"
+                    x:Name="entPassword"
+                    Text="{Binding Password}"/>
+            <Button 
+                    Text="Login"
+                    FontSize="12"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="White"
+                    WidthRequest="200"
+                    CornerRadius="10"
+                    Command="{Binding SubmitCommand}"/>
+
+            <Button
+                    WidthRequest="200"
+                    BorderWidth="5" 
+                    HorizontalOptions="CenterAndExpand"
+                    CornerRadius="10"  Text="Create account"
+                    x:Name="Signup" 
+                    Clicked="Signup_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Gladioli
+namespace Gladioli.Services
 {
     public static class Constants
     {

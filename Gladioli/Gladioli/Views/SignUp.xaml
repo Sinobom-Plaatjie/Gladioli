@@ -1,12 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gladioli.SignUp">
+             x:Class="Gladioli.SignUp" NavigationPage.HasNavigationBar="False"  Background="Pink" >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout.Padding>
+                <OnPlatform 
+                        x:TypeArguments="Thickness"
+                        iOS="20"
+                        Android="20,80,20,0">
+                </OnPlatform>
+            </StackLayout.Padding>
+            
+            <Label Text="Create a new account" FontSize="28" FontAttributes="Bold"
+                   TextColor="White" HorizontalOptions="CenterAndExpand"
+                   Margin="0,0,0,20"/>
+
+            <Label Text="Name" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="firstname" Text="{Binding Names}"
+                   Placeholder="Name"
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="200"/>
+            <Label Text="Surname" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="lastname" Text="{Binding Surname}" HorizontalOptions="CenterAndExpand"
+                   Placeholder="Surname"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="200"/>
+            <Label Text="Username" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="username" Text="{Binding Username}" HorizontalOptions="CenterAndExpand"
+                   Placeholder="Username"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="200"/>
+            <Label Text="Password" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="password" Text="{Binding Password}" HorizontalOptions="CenterAndExpand"
+                   Placeholder="Password" IsPassword="True"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="200"/>
+            <Label Text="Confirm password" HorizontalOptions="CenterAndExpand"/>
+
+            <Entry x:Name="confpassword" Text="{Binding Password}" HorizontalOptions="CenterAndExpand"
+                   Placeholder="Password" IsPassword="True"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="200"/>
+
+
+            <Button
+                HorizontalOptions="CenterAndExpand"
+                BorderColor="White"
+                BorderWidth="5" CornerRadius="10"
+                Text="Sign Up" x:Name="Signup"
+                Command="{Binding SignupSubmitCommand}"
+                BackgroundColor="White"/>
+            <Button 
+                 HorizontalOptions="CenterAndExpand"
+                BorderColor="White"
+                BorderWidth="5" CornerRadius="10" Text="Login" Clicked="Login"/>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
