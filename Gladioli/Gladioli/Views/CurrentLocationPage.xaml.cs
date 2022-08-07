@@ -52,5 +52,10 @@ namespace Gladioli
                 // Unable to get location
             }
         }
+
+        private void AddPeople(object sender, EventArgs e)
+        {
+
+        }
     }
 }
