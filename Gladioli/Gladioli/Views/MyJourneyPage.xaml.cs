@@ -16,15 +16,35 @@ namespace Gladioli.Views
         {
             InitializeComponent();
         }
-
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
+            base.OnAppearing();
 
+            GladioliDatabase database = await GladioliDatabase.Instance;
+            listView.ItemsSource = await database.GetItemsAsync();
+        }
+       
+        async void OnListAdded(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EntryOfJourneyPage
+            {
+                BindingContext = new Journey()
+            });
+        }
+        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+             if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new EntryOfJourneyPage
+                {
+                    BindingContext = e.SelectedItem as Journey
+                });
+            }
         }
 
         private void AddNewJourney(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new EntryOfJourneyPage());
         }
     }
 }
