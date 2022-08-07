@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gladioli
+namespace Gladioli.Services
 {
     public class Journey
     {
@@ -13,6 +13,8 @@ namespace Gladioli
 
         public DateTime DateTime { get; set; }
 
-      
+        public string Attachment { get; set; }  
+
+
     }
 }

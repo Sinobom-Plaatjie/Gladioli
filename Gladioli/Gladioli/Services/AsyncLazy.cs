@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gladioli
+namespace Gladioli.Services
 {
     public class AsyncLazy<T>
     {
