@@ -25,6 +25,9 @@
                                 <Label Text="{Binding DateTime}"
                                VerticalTextAlignment="Center"
                                HorizontalOptions="Center" />
+                                <Label Text="{Binding file}"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="Center" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

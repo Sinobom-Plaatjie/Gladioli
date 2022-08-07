@@ -4,11 +4,12 @@
               Padding="20,40,15,15"
              x:Class="Gladioli.CurrentLocationPage" NavigationPage.HasNavigationBar="False" >
     <ContentPage.Content>
+      
         <StackLayout>
             <Label Text="My Location!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
             <Image Source="" />
 
-
+          
             <StackLayout>
                 <Frame BorderColor="Black" >
                     <Grid>

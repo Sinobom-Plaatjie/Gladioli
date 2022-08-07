@@ -29,7 +29,7 @@
                 </StackLayout>
 
                 <StackLayout  Grid.Column="1"  Padding="40" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
-                    <ImageButton Source="https://cdn-icons.flaticon.com/png/512/3425/premium/3425073.png?token=exp=1659810891~hmac=f1057eba29675ab6a64e3282ad711cec" WidthRequest="86" HeightRequest="100" Clicked="FindMeButton"  BackgroundColor="Transparent"/>
+                    <ImageButton Source="location.png" WidthRequest="86" HeightRequest="100" Clicked="FindMeButton"  BackgroundColor="Transparent"/>
                     <Label Text="Find Me" TextColor="Black"  FontSize="20"/>
 
                 </StackLayout>

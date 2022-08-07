@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gladioli.Views.EntryOfJourneyPage">
+             x:Class="Gladioli.Views.EntryOfJourneyPage" BackgroundColor="Pink">
     <ContentPage.Content>
         <StackLayout Margin="25"
             VerticalOptions="StartAndExpand"  >
@@ -13,8 +13,14 @@
             <DatePicker MinimumDate="01/11/2012"
             MaximumDate="01/11/2023"
             Date="{Binding DateTime}" />
+            
+            <Label Text="Upload File"/>
+            <Image Source="{Binding file}"/>
+            <Button Text="Choose File"  Command="{Binding file}" Clicked="file" />
             <Button Margin="5"  Text="Save"
-                Clicked="OnSaveClicked" CornerRadius="20" BackgroundColor="DimGray" />
+                Clicked="OnSaveClicked" CornerRadius="20" BackgroundColor="White" />
+            <Button Margin="5"  Text="Delete"
+                Clicked="OnDeleteClicked" CornerRadius="20" BackgroundColor="White" />
         </StackLayout>
     
     </ContentPage.Content>
