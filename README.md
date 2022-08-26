@@ -1,6 +1,6 @@
 # Gladioli
 *Our problem statement is* ...
-"Most victims of Gender-based violence, would rather suffer in silence, than open up about their traumatic experiences. 
+Most victims of Gender-based violence, would rather suffer in silence, than open up about their traumatic experiences. 
 This affects the issue of collection & storing crucial evidence on time.
 
  *Solution* 
